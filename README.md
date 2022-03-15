@@ -25,7 +25,9 @@ Le modèle de prédiction a été entraîné à partir de la base de données op
 
 RandomForest et KNN avec les hyper-paramètres par défaut
 
-# Utilisation du model joblib
+# Utilisation du modèle joblib  
+  
+Note : le modèle joblib n'a pas été ajouté au répertoire git car trop volumineux. Pour le générer, il suffit d'exécuter le fichier nutriscore/model.py
 
 Import du modèle à l'aide de la fonction load de la bibliothèque joblib:
 
