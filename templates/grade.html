@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}</br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <div class="columns is-mobile is-centered">
+        <div class="column">
+            {% if nutriscore_grade == "a" %}
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/7/7d/Nutri-score-A.svg" class="has-text-centered">
+            {% endif %}
+            
+            {% if nutriscore_grade == "b" %}
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/4/4e/Nutri-score-B.svg" class="has-text-centered">
+            {% endif %}
+            
+            {% if nutriscore_grade == "c" %}
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/b/b5/Nutri-score-C.svg" class="has-text-centered">
+            {% endif %}
+            
+            {% if nutriscore_grade == "d" %}
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/d/d6/Nutri-score-D.svg" class="has-text-centered">
+            {% endif %}
+            
+            {% if nutriscore_grade == "e" %}
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/8/8a/Nutri-score-E.svg" class="has-text-centered">
+            {% endif %}
+    
+            </br>
+            </br>
+            </br>
+            <a href="/" class="button is-link is-medium" >Retour</a>
+        </div>
+    </div>
+    
+    
+{% endblock %}

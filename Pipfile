@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+joblib = "*"
+notebook = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+jinja2 = "*"
+python-multipart = "*"
+plotly = "*"
+seaborn = "*"
+sklearn = "*"
+imblearn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

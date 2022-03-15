@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mon Nutriscore</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="language" content="en-EN" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+  </head>
+  <body
+    style="
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-image: url('https://images.pexels.com/photos/952353/pexels-photo-952353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+      background-position: center center;
+      background-size: cover;
+    "
+  >
+    <div class="wrapper bg-image">
+      <h1
+        class="has-text-centered is-size-1"
+        style="background-color: #e6e6fa80; color: #000000"
+      >
+        NutrIA
+      </h1>
+      <div class="columns is-centered">
+        <main
+          class="column main is-half has-text-centered"
+          style="padding-top: 30px"
+        >
+          {% block content %} {% endblock %}
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+    <h3 class="is-size-3" style="background-color:#E6E6FA80; color: #000000;">Prédiction du nutriscore</h3>
+    </br>
+    <label style="color: whitesmoke;"><b>Selectionner le modèle IA</b></label>
+    <div class="control">
+        <div class="select">
+            <select name="model" required>
+                {% for model in list_model %}
+                    {% if model == "Random Forest" %}
+                        <option selected value="{{model}}">{{model}}</option>
+                    {% else %}
+                        <option value="{{model}}">{{model}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="columns is-desktop">
+        <div class="column">
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Energy 100g en kJ</b></label>
+                <input class="input" type="number" name='energy_100g' min="0" max="3700" required value="0.0" step="0.00001">
+            </div>
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Fat 100g en g</b></label>
+                <input class="input" type="number" name='fat_100g' min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Saturated fat 100g en g</b></label>
+                <input class="input" type="number" name='saturated_fat_100g' min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Carbohydrates 100g en g</b></label>
+                <input class="input" type="number" name='carbohydrates_100g' min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Sugars 100g en g</b></label>
+                <input class="input" type="number" name='sugars_100g' min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+        </div>
+        <div class="column">
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Fiber 100g en g</b></label>
+                <input class="input" type="number" name='fiber_100g' min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Proteins 100g en g</b></label>
+                <input class="input" type="number" name='proteins_100g' placeholder="energy_100g en kJ" min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Salt 100g en g</b></label>
+                <input class="input" type="number" name='salt_100g' placeholder="energy_100g en kJ" min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+            <div class="field">
+                <label style="color: whitesmoke;"><b>Fruits vegetables nuts 100g en g</b></label>
+                <input class="input" type="number" name='fruits_vegetables_nuts_estimate_from_ingredients_100g' placeholder="energy_100g en kJ" min="0" max="100"  required value="0.0" step="0.00001">
+            </div>
+            <p>
+                <label style="color: whitesmoke;"><b>pnns groups 2</b></label>
+            </p>
+                <div class="select">
+                    <select name="pnns_groups_2" required>
+                        {% for group in list_pnns_groups_2 %}
+                            {% if group == "unknown" %}
+                                <option selected value="{{group}}">{{group}}</option>
+                            {% else %}
+                                <option value="{{group}}">{{group}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+        </div>
+    </div>
+    
+        
+        
+        </br>
+        </br>
+        <button class="button is-link is-large" type='submit'>Prédire le nutriscore</button>
+    </div>
+</form>
+{% endblock %}
