@@ -1,7 +1,3 @@
-Projet 1 - Groupe 7
-
-Membres du groupe : Marouan et Nolan
-
 # Présentation de l'application 
 
 Application Web développée avec FastAPI
